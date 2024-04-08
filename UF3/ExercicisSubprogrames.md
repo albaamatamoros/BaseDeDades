@@ -1,7 +1,8 @@
 # ACTIVITAT - EXERCICIS SUBPROGRAMES
 
-#Exercici 1 - Fes una funció anomenada spData, tal que donada una data en format MySQL ( AAAA-MM-DD ) ens retorni una cadena de caràcters en format DD-MM-AAAA
-#Exemple : SELECT spData('1988-12-01') => 01-12-1988
+Exercici 1 - Fes una funció anomenada spData, tal que donada una data en format MySQL ( AAAA-MM-DD ) ens retorni una cadena de caràcters en format DD-MM-AAAA
+
+Exemple : SELECT spData('1988-12-01') => 01-12-1988
 
 ```mysql
 DELIMITER //
@@ -17,12 +18,13 @@ BEGIN
 END
 //
 DELIMITER;
-´´´
+```
 
-#Exercici 2 - Fes una funció anomenada spPotencia, tal que donada una base i un exponent, ens calculi la seva potència. Intenta no utilitzar la funció POW.
-#Exemple : SELECT spPotencia(2,3) => 8
+Exercici 2 - Fes una funció anomenada spPotencia, tal que donada una base i un exponent, ens calculi la seva potència. Intenta no utilitzar la funció POW.
 
+Exemple : SELECT spPotencia(2,3) => 8
 
+```mysql
 DELIMITER //
 DROP FUNCTION IF EXISTS spPotencia //
 CREATE FUNCTION spPotencia(pBase INT, pExp INT) RETURNS BIGINT
@@ -42,11 +44,15 @@ BEGIN
 END
 //
 DELIMITER;
+```
 
-#Exercici 3 - Fes una funció anomenada spIncrement que donat un codi d’empleat i un % de increment, ens calculi el salari sumant aquest percentatge.
-#Per exemple, suposem que l’ empleat amb id_empleat = 124 té un salari de 1000
-#Exemple: SELECT spIncrement(124,10) obtindriem -> 1100
+Exercici 3 - Fes una funció anomenada spIncrement que donat un codi d’empleat i un % de increment, ens calculi el salari sumant aquest percentatge.
 
+Per exemple, suposem que l’ empleat amb id_empleat = 124 té un salari de 1000
+
+Exemple: SELECT spIncrement(124,10) obtindriem -> 1100
+
+```mysql
 DELIMITER //
 DROP FUNCTION IF EXISTS spIncrement //
 CREATE FUNCTION spIncrement(pEmpleatId INT, pIncrement FLOAT) RETURNS FLOAT
@@ -62,9 +68,11 @@ BEGIN
 END
 //
 DELIMITER;
+```
 
-#Exercici 4 - Fes una funció anomenada spPringat, tal que li passem un codi de departament, i ens torni el codi d’empleat que guanya menys d’aquell departament. 
+Exercici 4 - Fes una funció anomenada spPringat, tal que li passem un codi de departament, i ens torni el codi d’empleat que guanya menys d’aquell departament. 
 
+```mysql
 DELIMITER //
 DROP FUNCTION IF EXISTS spPringat //
 CREATE FUNCTION spPringat(pDepartamentId INT) RETURNS INT
@@ -82,19 +90,29 @@ BEGIN
 END
 //
 DELIMITER;
+```
 
-#Exercici 5 - Utilitzant la funció spPringat fes una consulta per obtenir de cada
-#departament, l’empleat pringat. Mostra el codi i nom del departament, i el codi d’empleat.
+Exercici 5 - Utilitzant la funció spPringat fes una consulta per obtenir de cada departament, l’empleat pringat. 
 
+Mostra el codi i nom del departament, i el codi d’empleat.
+
+```mysql
 SELECT rrhh.spPringat();
+```
 
-#EXERCICI 6 Exercici 6 - Fes una funció anomenada spCategoria, tal que donat un codi d’empleat, ens digui en quina categoria professional està. El criteri que volem seguir per determinar
-#la categoria professional és en funció dels anys que porta treballant a l’empresa:
-#Entre 0 i 1 anys -> Auxiliar
-#Entre 2 i 10 anys -> Oficial de Segona
-#Entre 11 i 20 Anys -> Oficial de Primera
-#Més de 20 anys -> Que es jubili!
+EXERCICI 6 Exercici 6 - Fes una funció anomenada spCategoria, tal que donat un codi d’empleat, ens digui en quina categoria professional està. 
 
+El criteri que volem seguir per determinar la categoria professional és en funció dels anys que porta treballant a l’empresa:
+
+Entre 0 i 1 anys -> Auxiliar
+
+Entre 2 i 10 anys -> Oficial de Segona
+
+Entre 11 i 20 Anys -> Oficial de Primera
+
+Més de 20 anys -> Que es jubili!
+
+```mysql
 DELIMITER //
 DROP FUNCTION IF EXISTS spCategoria //
 CREATE FUNCTION spCategoria(pCodiEmpleat INT) RETURNS VARCHAR(20)
@@ -119,18 +137,21 @@ END //
 DELIMITER ;
 
 SELECT spCategoria(207);
+```
 
-#Exercici 7 - Fes una consulta utilitzant la funció anterior perquè mostri mostri de cada
-#empleat, el codi d’empleat, el nom, els anys treballats i la categoria professional a la que
+Exercici 7 - Fes una consulta utilitzant la funció anterior perquè mostri mostri de cada empleat, el codi d’empleat, el nom, els anys treballats i la categoria professional a la que
 #pertany.
 
+```mysql
 SELECT empleat_id, nom, cognoms, spCategoria(empleat_id)
 	FROM empleats;
+```
 
+Exercici 8 - Fes una funció anomenada spEdat, tal que donada una data per paràmetre ens retorni l'edat d'una persona. 
 
-#Exercici 8 - Fes una funció anomenada spEdat, tal que donada una data per paràmetre
-#ens retorni l'edat d'una persona. Les dates posteriors a la data d'avui han de retornar 0.
+Les dates posteriors a la data d'avui han de retornar 0.
 
+```mysql
 DELIMITER //
 DROP FUNCTION IF EXISTS spEdat //
 CREATE FUNCTION spEdat(pDataIntroduida DATE) RETURNS INT UNSIGNED
@@ -147,9 +168,11 @@ BEGIN
 DELIMITER ;
 
 SELECT spEdat('2002-07-03');
+```
 
-#Exercici 9 - Fes una funció que ens retorni el número de directors (caps) diferents tenim.
+Exercici 9 - Fes una funció que ens retorni el número de directors (caps) diferents tenim.
 
+```mysql
 DELIMITER // 
 DROP FUNCTION IF EXISTS spNumDirectors //
 CREATE FUNCTION spNumDirectors() RETURNS INT
@@ -165,17 +188,18 @@ BEGIN
 END //
 DELIMITER ;
 
-
 SELECT spNumDirectors();
-    
-#Exercici 10 - Quina instrucció utilitzarem si volem veure el contingut de la funció spPringat?
+```
 
+Exercici 10 - Quina instrucció utilitzarem si volem veure el contingut de la funció spPringat?
+
+```mysql
 SHOW CREATE FUNCTION spPringat;
 
 SELECT * FROM information_schema.routines;
 	
 
 SHOW TABLES FROM information_schema;
-
+```
 
 
