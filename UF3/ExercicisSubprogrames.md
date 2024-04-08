@@ -100,7 +100,7 @@ Mostra el codi i nom del departament, i el codi d’empleat.
 SELECT rrhh.spPringat();
 ```
 
-EXERCICI 6 Exercici 6 - Fes una funció anomenada spCategoria, tal que donat un codi d’empleat, ens digui en quina categoria professional està. 
+Exercici 6 - Fes una funció anomenada spCategoria, tal que donat un codi d’empleat, ens digui en quina categoria professional està. 
 
 El criteri que volem seguir per determinar la categoria professional és en funció dels anys que porta treballant a l’empresa:
 
