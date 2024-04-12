@@ -4,11 +4,11 @@ A aquest repositori podreu tovar totes les solucions dels exercicis de l'assigna
 
 ## UF3
 ### EXERCICIS:
-- ExercicisHandlersICursors
+- [ExercicisHandlersICursors](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF3/ExercicisHandlersICursors.md)
 
-- ExercicisProcediments
+- [ExercicisProcediments](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF3/ExercicisProcediments.md)
 
-- ExercicisSubprogrames
+- [ExercicisSubprogrames](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF3/ExercicisSubprogrames.md)
 
-- ExercicisTriggers
+- [ExercicisTriggers](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF3/ExercicisTriggers.md)
 ## UF4
