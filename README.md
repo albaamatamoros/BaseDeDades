@@ -1,8 +1,12 @@
-#BASE DE DADES
+# BASE DE DADES
 
-##UF3 
+## UF3
+### EXERCICIS:
+- ExercicisHandlersICursors
 
-ExercicisHandlersICursors
-ExercicisProcediments
-ExercicisSubprogrames
-ExercicisTriggers
+- ExercicisProcediments
+
+- ExercicisSubprogrames
+
+- ExercicisTriggers
+## UF4
