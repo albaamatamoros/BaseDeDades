@@ -1,5 +1,7 @@
 # BASE DE DADES
 
+:construction: Proyecto en construcción :construction:
+
 A aquest repositori podreu tovar totes les solucions dels exercicis de l'assignatura base de dades.
 
 ## UF3
