@@ -7,8 +7,28 @@ Exercici 1: Omplir la següent taula indicant en cada cas si es pot accedir als
 registres NEW i OLD des del trigger corresponent i, en cas afirmatiu, quin tipus
 d'operació és pot realitzar (L(llegir) o M(modificar)).
 
-```mysql
-```
+
+### INSERT:
+
+|  | before | after |
+| ----|---|---|
+| NEW | M | X |
+| OLD | X | X |
+
+### DELETE:
+
+|  | before | after |
+| ----|---|---|
+| NEW | X | X |
+| OLD | L | X |
+
+### UPDATE:
+
+|  | before | after |
+| ----|---|---|
+| NEW | M | X |
+| OLD | X | L |
+
 
 Exercici 2: A quina taula o taules de la base de dades INFORMATION_SCHEMA de
 MySQL es poden consultar els triggers que hi ha a la base dades?
