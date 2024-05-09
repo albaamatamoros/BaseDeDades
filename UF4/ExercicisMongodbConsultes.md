@@ -3,7 +3,7 @@
 1. Obtenir de tots els empleats, el nom, cognoms i salari. Mostrar només 4 registres
 
 ```json
-db.empleats.find({}, {nom: 1, cognoms: 1, salari: 1} ).limit(5)
+db.empleats.find({}, {nom: 1, cognoms: 1, salari: 1} ).limit(4)
 ```
 2. Mostra la quantitat de departaments que hi ha
 
@@ -25,7 +25,13 @@ db.departaments.find({ "feina.nom" : "100"})
 
 5. Recupera els empleats que treballen al departament de “IT”
 
+```json
+db.departaments.find({ "departament.nom" : "IT"})
+```
+
 6. Recupera els empleats que van ser contractats a partir de l’1 de gener de 1985
+
+
 
 7. Recupera els empleats amb un salari superior a 2000
 
