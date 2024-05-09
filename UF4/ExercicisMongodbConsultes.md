@@ -2,30 +2,30 @@
 
 1. Obtenir de tots els empleats, el nom, cognoms i salari. Mostrar només 4 registres
 
-```json
+```js
 db.empleats.find({}, {nom: 1, cognoms: 1, salari: 1} ).limit(4)
 ```
 2. Mostra la quantitat de departaments que hi ha
 
-```json
+```js
 db.departaments.find().count()
 ```
 
 3. Recupera l’empleat “emplat_id=100”
 
-```json
+```js
 db.departaments.find({ empleat_id: "100"})
 ```
 
 4. Recupera els empleats amb el càrrec de “President”
 
-```json
+```js
 db.departaments.find({ "feina.nom" : "100"})
 ```
 
 5. Recupera els empleats que treballen al departament de “IT”
 
-```json
+```js
 db.departaments.find({ "departament.nom" : "IT"})
 ```
 
