@@ -30,8 +30,11 @@ db.departaments.find({ "departament.nom" : "IT"})
 ```
 
 6. Recupera els empleats que van ser contractats a partir de l’1 de gener de 1985
+(Tambien se puede usar new Date/ISODate)
 
-
+```js
+db.empleats.find({ data_contractacio: { $gte: ISODate("1985-01-01")} })
+```
 
 7. Recupera els empleats amb un salari superior a 2000
 
