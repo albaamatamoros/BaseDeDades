@@ -20,7 +20,7 @@ db.departaments.find({ empleat_id: "100"})
 4. Recupera els empleats amb el càrrec de “President”
 
 ```js
-db.departaments.find({ "feina.nom" : "100"})
+db.departaments.find({ "feina.nom" : "President"})
 ```
 
 5. Recupera els empleats que treballen al departament de “IT”
