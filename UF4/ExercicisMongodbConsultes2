@@ -1,0 +1,7 @@
+# ACTIVITAT - EXERCICIS CONSULT
+
+5. Busca els estudiants nascuts després de l’any 1990
+
+```jd
+db.students.find({birth_year : { $gt: 1990}})
+```
