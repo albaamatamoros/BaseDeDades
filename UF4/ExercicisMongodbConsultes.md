@@ -62,21 +62,25 @@ db.empleats.find( {telefon: { $regex: /^515/ }})
 "AD_VP"
 
 ```js
+db.empleats.find({"feina.codi":{$ne:"AD_VP"}})
 ```
 
 11. Recupera els empleats que tenen pct_comissio.
 
 ```js
+db.empleats.find({pct_comissio:{$exists:true}})
 ```
 
 12. Recupera els empleats que tenen pct_comissio i hagi treballat o treballin
 actualment de "Cap de Vendes" . Utilitza el codi de feina "SA_MAN".
 
 ```js
+db.empleats.find({$and: [{pct_comissio: {$exists:true}},{$or:[{historial_feines: {$elemMatch: {"feina.codi": "SA_MAN"}}}]}]})
 ```
 
 13. Recupera els empleats que han tingut 2 feines. No tinguis en compte la feina
 actual.
 
 ```js
+db.empleats.find({historial_feines: {$size:2}})
 ```
