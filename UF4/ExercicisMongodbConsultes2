@@ -1,5 +1,7 @@
 # ACTIVITAT - EXERCICIS CONSULT
 
+### Base de dades edx – col·lecció students
+
 1. Busca els estudiants de gènere masculí
 
 ```js
@@ -115,10 +117,29 @@ db.students.find({phone:/^622/})
 19. Busca els estudiants que el seu dni comenci i acabi amb una lletra
 
 ```js
-db.students.find({dni:/^[A-Z].+[A-Z]$/})
+db.students.find({dni:/^[a-z].+[a-z]$/i})
 ```
 
 20. Busca els estudiants que el seu nom comenci per una vocal
 
  ```js
+ db.students.find({name:/^[aeiou]/i})
  ```
+
+21. Busca els estudiants que el seu nom sigui compost
+
+```js
+db.students.find({name:/\w\s\w/i})
+```
+
+22. Busca els estudiants amb un nom més llarg de 13 caràcters
+
+```js
+```
+
+23. Busca els estudiants amb 3 o més vocals en el seu nom
+
+```js
+```
+
+### Base de dades edx – col·lecció bios
