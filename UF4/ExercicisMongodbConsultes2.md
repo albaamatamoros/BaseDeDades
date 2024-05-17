@@ -157,3 +157,26 @@ db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 ```
 
 ### Base de dades edx – col·lecció bios
+
+24. Busca aquells desenvolupadors que han realitzat contribucions en OOP
+25. Busca aquells desenvolupadors que han realitzat contribucions en OOP o Java
+26. Busca aquells desenvolupadors que han realitzat contribucions en OOP i Simula
+27. Busca aquells desenvolupadors que siguin vius
+28. Busca aquells desenvolupadors que siguin morts
+29. Busca aquells desenvolupadors que han obtingut un premi a l’any 2002
+30. Busca aquells desenvolupadors que han obtingut exactament 3 premis.
+
+### Base de dades imdb – col·lecció people
+
+31. Buscar les persones que només han actuat. No han dirigit
+32. Busca les persones que només an dirigit. No han actuat
+33. Buscar les persones que han actuat i dirigit
+34. Buscar les persones que ni han actuat ni dirigit.
+35. Buscar les pel·lícules protagonitzades per Penelope Cruz
+
+### Base de dades edx – col·lecció books
+
+36. Buscar aquells llibres que han estat escrits per Martin Fowloer i Kent Beck
+37. Buscar els llibres que tinguin el tag ‘programming’ i ‘agile’
+38. Buscar els llibres amb el tag ‘html’, ‘html5’, ‘css’ o ‘css3’
+39. Buscar els llibres que no tinguin el tag ‘html’, ‘html5’, ‘css’ o ‘css3’
