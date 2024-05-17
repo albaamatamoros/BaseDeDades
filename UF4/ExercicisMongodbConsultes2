@@ -73,49 +73,52 @@ db.students.find({birth_year : {$nin : [1970,1980,1990]}})
 12. Busca aquells estudiants nascuts en any parell.
 
 ```js
-
+db.students.find({ "birth_year": { $mod: [2, 0] } })
 ```
 
 13. Busca els estudiants que tinguin telèfon auxiliar
 
 ```js
-
+db.students.find({ "phone_aux": { "$exists": true } })
 ```
 
 14. Busca els estudiants que no tinguin telèfon auxiliar
 
 ```js
-
+db.students.find({ "phone_aux": { "$exists": false } })
 ```
 
 15. Busca els estudiants que no tinguin segon cognom
 
 ```js
-
+db.students.find({ "lastname2": { "$exists": false } })
 ```
 
 16. Busca els estudiants que tinguin telèfon auxiliar i només el primer cognom
 
 ```js
-
+db.students.find({ "phone_aux": { "$exists": true }, "lastname1": { "$exists": true }, "lastname2": { "$exists": false }})
 ```
 
 17. Busca els estudiants que el seu correu electrònic acabi en .net
 
 ```js
-
+db.students.find({email:/\.net$/})
 ```
 
 18. Busca els estudiants que el seu telèfon comenci per 622
 
 ```js
-
+db.students.find({phone:/^622/})
 ```
 
 19. Busca els estudiants que el seu dni comenci i acabi amb una lletra
 
 ```js
-
+db.students.find({dni:/^[A-Z].+[A-Z]$/})
 ```
 
 20. Busca els estudiants que el seu nom comenci per una vocal
+
+ ```js
+ ```
