@@ -159,8 +159,20 @@ db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 ### Base de dades edx – col·lecció bios
 
 24. Busca aquells desenvolupadors que han realitzat contribucions en OOP
+
+```js
+```
+
 25. Busca aquells desenvolupadors que han realitzat contribucions en OOP o Java
+
+```js
+```
+
 26. Busca aquells desenvolupadors que han realitzat contribucions en OOP i Simula
+
+```js
+```
+
 27. Busca aquells desenvolupadors que siguin vius
 28. Busca aquells desenvolupadors que siguin morts
 29. Busca aquells desenvolupadors que han obtingut un premi a l’any 2002
