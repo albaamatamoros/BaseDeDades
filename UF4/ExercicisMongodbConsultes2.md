@@ -129,17 +129,31 @@ db.students.find({dni:/^[a-z].+[a-z]$/i})
 21. Busca els estudiants que el seu nom sigui compost
 
 ```js
+-- Comprovar amb Aggreation Framework.
+
 db.students.find({name:/\w\s\w/i})
+db.students.find({name:/\s/i})
+db.students.find({name:/^.+ .+/i})
 ```
 
 22. Busca els estudiants amb un nom més llarg de 13 caràcters
 
 ```js
+db.students.find({ "name": { $regex: /.{14,}/ } })
+
+||
+
+db.students.find({$where: "(this.name.length > 13)"})
+
+||
+
+db.students.find({$expr:{$gt:[{$strLenCP:"$name"},13]}})
 ```
 
 23. Busca els estudiants amb 3 o més vocals en el seu nom
 
 ```js
+db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 ```
 
 ### Base de dades edx – col·lecció bios
