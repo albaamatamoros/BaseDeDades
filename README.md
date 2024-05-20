@@ -14,3 +14,6 @@ A aquest repositori podreu tovar totes les solucions dels exercicis de l'assigna
 
 - [ExercicisTriggers](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF3/ExercicisTriggers.md)
 ## UF4
+- [ExercicisMongodbConsultes](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF4/ExercicisMongodbConsultes.md)
+
+- [ExercicisMongodbConsultes2](https://github.com/albaamatamoros/BaseDeDades/blob/main/UF4/ExercicisMongodbConsultes.md)
