@@ -1,4 +1,4 @@
-# ACTIVITAT - EXERCICIS CONSULT
+# ACTIVITAT - EXERCICIS CONSULTES
 
 ### Base de dades edx – col·lecció students
 

@@ -1,4 +1,4 @@
-# ACTIVITAT - EXERCICIS CONSULT
+# ACTIVITAT - EXERCICIS CONSULTES
 
 1. Obtenir de tots els empleats, el nom, cognoms i salari. Mostrar només 4 registres
 
