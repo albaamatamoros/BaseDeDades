@@ -174,21 +174,70 @@ db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 ```
 
 27. Busca aquells desenvolupadors que siguin vius
+
+```js
+```
+
 28. Busca aquells desenvolupadors que siguin morts
+
+```js
+```
+
 29. Busca aquells desenvolupadors que han obtingut un premi a l’any 2002
+
+```js
+```
+
 30. Busca aquells desenvolupadors que han obtingut exactament 3 premis.
+
+```js
+```
 
 ### Base de dades imdb – col·lecció people
 
 31. Buscar les persones que només han actuat. No han dirigit
+
+```js
+```
+
 32. Busca les persones que només an dirigit. No han actuat
+
+```js
+```
+
 33. Buscar les persones que han actuat i dirigit
+
+```js
+```
+
 34. Buscar les persones que ni han actuat ni dirigit.
+
+```js
+```
+
 35. Buscar les pel·lícules protagonitzades per Penelope Cruz
+
+```js
+```
 
 ### Base de dades edx – col·lecció books
 
 36. Buscar aquells llibres que han estat escrits per Martin Fowloer i Kent Beck
+
+```js
+```
+
 37. Buscar els llibres que tinguin el tag ‘programming’ i ‘agile’
+
+```js
+```
+
 38. Buscar els llibres amb el tag ‘html’, ‘html5’, ‘css’ o ‘css3’
+
+```js
+```
+
 39. Buscar els llibres que no tinguin el tag ‘html’, ‘html5’, ‘css’ o ‘css3’
+
+```js
+```
