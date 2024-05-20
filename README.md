@@ -1,4 +1,4 @@
-v# BASE DE DADES
+# BASE DE DADES
 
 :construction: Proyecto en construcción :construction:
 
