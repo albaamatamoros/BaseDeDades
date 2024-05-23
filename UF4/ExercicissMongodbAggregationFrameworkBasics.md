@@ -2,7 +2,7 @@
 
 1. Mostra la quantitat d’empleats per cada departament. Mostra id de departament i la quantitat.
 
-complet stage 1:
+Stage 1:
 
 ```js
 db.empleats.aggregate([
@@ -29,6 +29,8 @@ $group Stage 1:
 
 2. Si no ho has tingut en compte en l’exercici anterior. Només tingues en compte aquells empleats que estiguin en un departament.
 
+Stage1 + Stage 2:
+
 ```js
 db.empleats.aggregate(
   [
@@ -41,15 +43,18 @@ db.empleats.aggregate(
     { $match: { _id: { $ne: null } } }
 ]
 );
+```
+$match Stage 2
 
-//Stage
-
+```js
 {
   _id: {"$ne": null}
 }
 ```
 
 3. Ordena el resultat anterior per els departament de més a menys nombre d’empleats.
+
+Stage1 + Stage 2 + Stage 3 (complet):
 
 ```js
 db.empleats.aggregate(
@@ -64,9 +69,10 @@ db.empleats.aggregate(
     { $sort: { numEmpleats: -1 } }
   ]
 );
+```
+$ sort Stage 3:
 
-//Stage
-
+```js
 {
  	numEmpleats : -1
 }
