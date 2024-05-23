@@ -70,7 +70,8 @@ db.empleats.aggregate(
   ]
 );
 ```
-$ sort Stage 3:
+
+$sort Stage 3:
 
 ```js
 {
