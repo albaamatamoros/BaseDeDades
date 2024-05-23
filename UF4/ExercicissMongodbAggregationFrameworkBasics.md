@@ -2,7 +2,7 @@
 
 1. Mostra la quantitat d’empleats per cada departament. Mostra id de departament i la quantitat.
 
-complet:
+complet stage 1:
 
 ```js
 db.empleats.aggregate([
@@ -16,7 +16,7 @@ db.empleats.aggregate([
 
 ```
 
-Stage 1:
+$group Stage 1:
 
 ```js
 {
