@@ -161,36 +161,44 @@ db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 24. Busca aquells desenvolupadors que han realitzat contribucions en OOP
 
 ```js
+db.bios.find({contribs: {$in: ["OOP"]}})
 ```
 
 25. Busca aquells desenvolupadors que han realitzat contribucions en OOP o Java
 
 ```js
+db.bios.find({contribs: {$in: ["OOP", "Java"]}})
 ```
 
 26. Busca aquells desenvolupadors que han realitzat contribucions en OOP i Simula
 
 ```js
+db.bios.find({ contribs: { $all: ["OOP", "Simula"] } })
+
 ```
 
 27. Busca aquells desenvolupadors que siguin vius
 
 ```js
+db.bios.find({deathYear: {$exists : false}})
 ```
 
 28. Busca aquells desenvolupadors que siguin morts
 
 ```js
+db.bios.find({deathYear: {$exists : true}})
 ```
 
 29. Busca aquells desenvolupadors que han obtingut un premi a l’any 2002
 
 ```js
+db.bios.find({ "awards.year": 2002 })
 ```
 
 30. Busca aquells desenvolupadors que han obtingut exactament 3 premis.
 
 ```js
+db.bios.find({"awards": {$size: 3}})
 ```
 
 ### Base de dades imdb – col·lecció people
@@ -198,6 +206,7 @@ db.students.find({name:/.*[aeiouàáèéíòóú]{3}.*/i})
 31. Buscar les persones que només han actuat. No han dirigit
 
 ```js
+
 ```
 
 32. Busca les persones que només an dirigit. No han actuat
